@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <link href="static/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <center>
+            <div class='cont'>
+                
+            
+            {% if data[0] == 0 %}
+            <h1>Missing person</h1>
+            
+            {%else%}
+            <h1> Found in the database(Not A Missing Person) </h1>
+            
+            {%endif%}
+
+        </div>
+        <h1>class<br> <span>{{data[0]}}</span> <br> </h1>
+            <h1>picture taken as input<br> </h1>
+            
+            <img src="{{url_for('load_img')}}" alt='img'>
+            <a href="/" class='btn'>go back</a>
+
+        </center>
+        
+    </body>
+</html>
